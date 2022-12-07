@@ -1,6 +1,6 @@
 /* pages/index.js */
 import { useEffect, useState } from "react";
-import { client, exploreProfiles } from "../api";
+import { client, exploreProfiles } from "../../api";
 import Link from "next/link";
 
 export default function Home() {
