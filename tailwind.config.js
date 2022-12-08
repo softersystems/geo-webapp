@@ -7,7 +7,9 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        "dark-brown-grey": "#292121",
+        "dark-brown-grey": "#221c1c",
+        "layers-pink": "#F2ACB3",
+        "layers-pink-light": "#FDC6CC",
       },
     },
   },
