@@ -41,8 +41,8 @@ export default function Home() {
           <Image
             src={commonGroundIcon}
             alt="Common Ground: team and community chat server."
-            height={23}
-            width={23}
+            height={32}
+            width={32}
           />
         </Link>
         <Link href="https://github.com/GIRLYDAO/layers-webapp" target="_blank">
