@@ -17,7 +17,10 @@ export default function Home() {
   return (
     <div className="min-h-screen text-layers-pink-light font-extralight bg-dark-brown-grey">
       <nav className="absolute text-left p-6">
-        <Link href="/" className={`text-3xl ${fontCircle.className}`}>
+        <Link
+          href="/"
+          className={`text-3xl tracking-[0.5rem] ${fontCircle.className}`}
+        >
           Layers
         </Link>
       </nav>
