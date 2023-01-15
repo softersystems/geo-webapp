@@ -11,13 +11,13 @@ const fontDigitalDream = localFont({ src: "../../public/Digitaldream.ttf" });
 export default function Home() {
   return (
     <div className="min-h-screen text-layers-pink font-extralight bg-dark-brown-grey">
+      <nav className="text-center p-6">
+        <Link href="/">Layers</Link>
+      </nav>
       <div className="fixed flex flex-row justify-around items-center">
-        <h1 className="text-center p-6">
-          <Link href="/">Layers</Link>
-        </h1>
-        <h2>
-          <Link href="/about">(About)</Link>
-        </h2>
+        <h1>The Art Layer</h1>
+        <h2>IRL discovery tool and marketplace</h2>
+        <h3>iOS/Android Beta</h3>
       </div>
     </div>
   );
