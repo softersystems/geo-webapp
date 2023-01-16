@@ -1,8 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
-import layersLogo from "../public/logo-0.0.1.png";
+import layersLogo from "../public/logo-0.0.1.3.png";
 import twitterIcon from "../public/twitter-icon.svg";
-import gitHubIcon from "../public/github-icon.svg";
 import commonGroundIcon from "../public/cg-icon.svg";
 import localFont from "@next/font/local";
 
@@ -18,9 +17,13 @@ export default function Home() {
     <>
       <div className="min-h-screen pt-4 pb-20 text-layers-pink-light font-extralight bg-dark-brown-grey flex flex-col justify-around items-center">
         <div className="flex flex-col justify-around items-center gap-[2rem] max-w-md px-20 ">
-          <Image src={layersLogo} alt="Layers logo" className="fit" />
+          <Image
+            src={layersLogo}
+            alt="Layers logo"
+            className="fit max-w-[80%]"
+          />
           <h1
-            className={`mt-3 text-5xl tracking-[0.5rem] indent-[0.5rem] ${fontCircle.className}`}
+            className={`mt-3 text-5xl text-transparent bg-title-gradient bg-clip-text tracking-[0.5rem] indent-[0.5rem] ${fontCircle.className}`}
           >
             Layers
           </h1>
