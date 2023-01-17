@@ -11,6 +11,9 @@ const fontITCGaramond = localFont({
 const fontCircle = localFont({
   src: "../public/Circle-PhotoshopSupply.otf",
 });
+const fontDigitalDream = localFont({
+  src: "../public/Digitaldream.ttf",
+});
 
 export default function Home() {
   return (
@@ -116,6 +119,17 @@ export default function Home() {
             />
           </Link> */}
         </div>
+        <footer
+          className={`text-center mt-6 opacity-50 tracking-widest ${fontITCGaramond.className}`}
+        >
+          A&nbsp;&nbsp;&nbsp;
+          <Link href="https://girly.network" target="_blank">
+            <span className={`leading-[3rem] ${fontDigitalDream.className}`}>
+              GIRLY
+            </span>
+          </Link>
+          &nbsp;&nbsp;project.
+        </footer>
       </div>
     </>
   );
