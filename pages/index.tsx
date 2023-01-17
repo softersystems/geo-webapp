@@ -124,11 +124,21 @@ export default function Home() {
         >
           A&nbsp;&nbsp;&nbsp;
           <Link href="https://girly.network" target="_blank">
-            <span className={`leading-[3rem] ${fontDigitalDream.className}`}>
+            <span
+              className={`text-m leading-[3rem] ${fontDigitalDream.className}`}
+            >
               GIRLY
             </span>
           </Link>
-          &nbsp;&nbsp;project.
+          &nbsp;&nbsp;project by{" "}
+          <Link
+            href="https://twitter.com/saniagarciadev"
+            target="_blank"
+            className="underline"
+          >
+            Sania García
+          </Link>
+          .
         </footer>
       </div>
     </>
