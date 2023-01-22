@@ -26,7 +26,7 @@ export default function Home() {
       </nav>
       <div className="min-h-screen bg-logo-gradient flex flex-col justify-around items-center">
         <div
-          className={`p-[10rem] text-right tracking-[1rem] bg-white-planet bg-contain bg-no-repeat bg-center flex flex-col justify-around items-end gap-5 ${fontITCGaramond.className}`}
+          className={`md:p-[10rem] text-right tracking-[1rem] bg-white-planet bg-contain bg-no-repeat bg-center flex flex-col justify-around items-end gap-5 ${fontITCGaramond.className}`}
         >
           <h1 className={"text-7xl uppercase "}>
             The Art
