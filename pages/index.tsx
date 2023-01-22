@@ -1,6 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
-import layersLogo from "../public/logo-0.0.1.3.png";
+import layersLogo from "../public/logo-0.0.2.png";
 import twitterIcon from "../public/twitter-icon.svg";
 import commonGroundIcon from "../public/cg-icon.svg";
 import localFont from "@next/font/local";
@@ -18,22 +18,22 @@ const fontDigitalDream = localFont({
 export default function Home() {
   return (
     <>
-      <div className="min-h-screen pt-4 pb-20 text-layers-pink-light font-extralight bg-dark-brown-grey flex flex-col justify-around items-center">
-        <div className="flex flex-col justify-around items-center gap-[2rem] max-w-md px-20 ">
+      <div className="min-h-screen pt-6 pb-20 text-layers-pink-light font-extralight bg-dark-brown-grey flex flex-col justify-around items-center">
+        <div className="flex flex-col justify-around items-center max-w-md px-20 ">
           <Image
             src={layersLogo}
             alt="Layers logo"
-            className="fit max-w-[80%]"
+            className="fit max-w-[100%]"
           />
           <h1
-            className={`mt-3 text-5xl text-transparent bg-title-gradient bg-clip-text tracking-[0.5rem] indent-[0.5rem] ${fontCircle.className}`}
+            className={`text-5xl text-transparent bg-title-gradient bg-clip-text tracking-[0.5rem] indent-[0.5rem] ${fontCircle.className}`}
           >
             Layers
           </h1>
         </div>
 
         <h2
-          className={`text-2xl text-center tracking-widest opacity-50 ${fontITCGaramond.className}`}
+          className={`text-3xl text-center tracking-widest opacity-50 ${fontITCGaramond.className}`}
         >
           Maps,
           <p />
@@ -47,8 +47,8 @@ export default function Home() {
           <span className={`text-9xl opacity-80 ${fontCircle.className}`}>
             L
           </span>
-          ayers is a new type of maps app: collaborative, decentralised and
-          extensively customisable.
+          ayers is a new type of maps app: dynamic, decentralised and
+          collaborative.
           <br />
           <br />
           <span className={`text-9xl opacity-80 ${fontCircle.className}`}>
