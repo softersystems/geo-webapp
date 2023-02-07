@@ -1,16 +1,11 @@
 import Link from "next/link";
-import Image from "next/image";
-import planetBoi from "../../public/planet boi 3 color gradient transparent.png";
-import twitterIcon from "../../public/twitter-icon.svg";
-import gitHubIcon from "../../public/github-icon.svg";
-import commonGroundIcon from "../../public/cg-icon.svg";
 import localFont from "@next/font/local";
 
 const fontITCGaramond = localFont({
   src: "../../public/itcgaramondstd-ltcond.otf",
 });
-const fontCircle = localFont({
-  src: "../../public/Circle-PhotoshopSupply.otf",
+const modulus = localFont({
+  src: "../../public/Modulus-Bold.otf",
 });
 
 export default function Home() {
@@ -19,7 +14,7 @@ export default function Home() {
       <nav className="absolute text-left p-6">
         <Link
           href="/"
-          className={`text-3xl ${fontCircle.className} opacity-60`}
+          className={`text-3xl ${modulus.className} uppercase opacity-60`}
         >
           Layers
         </Link>
