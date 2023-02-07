@@ -33,50 +33,46 @@ export default function Home() {
       </div>
       <div className="min-h-screen pt-4 pb-20 text-layers-pink-light bg-lighter-brown-grey flex flex-col justify-around items-center">
         <div
-          className={`max-w-[30rem] mx-4 my-40 sm:m-40 text-2xl text-left tracking-widest opacity-80 ${fontITCGaramond.className}`}
+          className={`max-w-[30rem] mx-4 my-40 sm:m-40 text-xl text-left opacity-80`}
         >
-          <span className={`text-9xl opacity-80 ${fontCircle.className}`}>
-            L
-          </span>
-          ayers is a new type of maps app: dynamic, decentralised and
-          collaborative.
-          <br />
-          <br />
-          <span className={`text-9xl opacity-80 ${fontCircle.className}`}>
-            I
-          </span>
-          n development for iOS and Android, it&apos;ll be home to dynamic maps,
-          or data &apos;layers&apos;, that users will be able to tune in and out
-          of, as they navigate the world with unique interests and needs. No
-          more one-size-fits-all.
-          <br />
-          <br />
-          <span className={`text-9xl opacity-80 ${fontCircle.className}`}>
-            S
-          </span>
-          ome layers will be simple collections of places, while others will be
-          new and experimental location-based use cases for latest Web3 and
-          geo-technologies.
-          <br />
-          <br />
-          <span className={`text-9xl opacity-80 ${fontCircle.className}`}>
-            T
-          </span>
-          he first of these special layers will be{" "}
-          <Link href="/art" className={"underline"}>
-            The Art Layer
-          </Link>
-          , which is planned as the primary (perhaps only?) use case when the
-          app launches in Spring 2023. Further development on this layer and
-          others will depend on community feedback.
-          <br /> <br />
-          <span className={`text-9xl opacity-80 ${fontCircle.className}`}>
-            A
-          </span>{" "}
-          more active social media presence will come down the line. For now,
-          you can follow to be the first to learn more, join the conversation on
-          Common Ground, and feel free to reach out with any thoughts, questions
-          or comments.
+          <p className="mb-20">
+            <span className={`text-6xl ${fontITCGaramond.className}`}>L </span>
+            ayers is a new type of maps app: dynamic, decentralised and
+            collaborative.
+          </p>
+          <p className="mb-20">
+            <span className={`text-6xl ${fontITCGaramond.className}`}>I </span>n
+            development for iOS and Android, it&apos;ll be home to dynamic maps,
+            or data &apos;layers&apos;, that users will be able to tune in and
+            out of, as they navigate the world with unique interests and needs.
+            No more one-size-fits-all.
+          </p>
+
+          <p className="mb-20">
+            <span className={`text-6xl ${fontITCGaramond.className}`}>S </span>
+            ome layers will be simple collections of places, while others will
+            be new and experimental location-based use cases for latest Web3 and
+            geo-technologies.
+          </p>
+
+          <p className="mb-20">
+            <span className={`text-6xl ${fontITCGaramond.className}`}>T </span>
+            he first of these special layers will be{" "}
+            <Link href="/art" className={"underline"}>
+              The Art Layer
+            </Link>
+            , which is planned as the primary (perhaps only?) use case when the
+            app launches in Spring 2023. Further development on this layer and
+            others will depend on community feedback.
+          </p>
+
+          <p className="mb-20">
+            <span className={`text-6xl ${fontITCGaramond.className}`}>A </span>{" "}
+            more active social media presence will come down the line. For now,
+            you can follow to be the first to learn more, join the conversation
+            on Common Ground, and feel free to reach out with any thoughts,
+            questions or comments.
+          </p>
         </div>
         <div className="mb-40 flex justify-center items-center gap-20">
           <Link href="https://twitter.com/layerslive" target="_blank">

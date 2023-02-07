@@ -6,6 +6,22 @@ module.exports = {
   ],
   theme: {
     extend: {
+      fontSize: {
+        "6xl": [
+          "4rem",
+          {
+            lineHeight: "0rem",
+          },
+        ],
+        "3xl": [
+          "1.875rem",
+          {
+            lineHeight: "2.25rem",
+            letterSpacing: "-0.02em",
+            fontWeight: "700",
+          },
+        ],
+      },
       colors: {
         "dark-brown-grey": "#624F54",
         "lighter-brown-grey": "#2B2324",
