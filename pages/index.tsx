@@ -36,27 +36,43 @@ export default function Home() {
           className={`max-w-[30rem] mx-4 my-40 sm:m-40 text-xl text-left opacity-80`}
         >
           <p className="mb-20">
-            <span className={`text-6xl ${fontITCGaramond.className}`}>L </span>
+            <span
+              className={`text-dropcap float-left w-9 pl-0.5 -mb-12 ${fontITCGaramond.className}`}
+            >
+              L{" "}
+            </span>
             ayers is a new type of maps app: dynamic, decentralised and
             collaborative.
           </p>
           <p className="mb-20">
-            <span className={`text-6xl ${fontITCGaramond.className}`}>I </span>n
-            development for iOS and Android, it&apos;ll be home to dynamic maps,
-            or data &apos;layers&apos;, that users will be able to tune in and
-            out of, as they navigate the world with unique interests and needs.
-            No more one-size-fits-all.
+            <span
+              className={`text-dropcap float-left w-9 pl-0.5 -mb-12 ${fontITCGaramond.className}`}
+            >
+              I{" "}
+            </span>
+            n development for iOS and Android, it&apos;ll be home to dynamic
+            maps, or data &apos;layers&apos;, that users will be able to tune in
+            and out of, as they navigate the world with unique interests and
+            needs. No more one-size-fits-all.
           </p>
 
           <p className="mb-20">
-            <span className={`text-6xl ${fontITCGaramond.className}`}>S </span>
+            <span
+              className={`text-dropcap float-left w-9 pl-0.5 -mb-12 ${fontITCGaramond.className}`}
+            >
+              S{" "}
+            </span>
             ome layers will be simple collections of places, while others will
             be new and experimental location-based use cases for latest Web3 and
             geo-technologies.
           </p>
 
           <p className="mb-20">
-            <span className={`text-6xl ${fontITCGaramond.className}`}>T </span>
+            <span
+              className={`text-dropcap float-left w-9 pl-0.5 -mb-12 ${fontITCGaramond.className}`}
+            >
+              T{" "}
+            </span>
             he first of these special layers will be{" "}
             <Link href="/art" className={"underline"}>
               The Art Layer
@@ -67,7 +83,11 @@ export default function Home() {
           </p>
 
           <p className="mb-20">
-            <span className={`text-6xl ${fontITCGaramond.className}`}>A </span>{" "}
+            <span
+              className={`text-dropcap float-left w-9 pl-0.5 -mb-12 ${fontITCGaramond.className}`}
+            >
+              A{" "}
+            </span>{" "}
             more active social media presence will come down the line. For now,
             you can follow to be the first to learn more, join the conversation
             on Common Ground, and feel free to reach out with any thoughts,

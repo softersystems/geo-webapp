@@ -7,10 +7,11 @@ module.exports = {
   theme: {
     extend: {
       fontSize: {
-        "6xl": [
+        dropcap: [
           "4rem",
           {
-            lineHeight: "0rem",
+            float: "left",
+            lineHeight: "4.8rem",
           },
         ],
         "3xl": [
