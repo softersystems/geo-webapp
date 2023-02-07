@@ -1,9 +1,9 @@
 import Link from "next/link";
 import Image from "next/image";
-import layersLogo from "../public/logo-0.0.2.png";
+import localFont from "@next/font/local";
+import layersLogo from "../public/logo-0.0.3.svg";
 import twitterIcon from "../public/twitter-icon.svg";
 import commonGroundIcon from "../public/cg-icon.svg";
-import localFont from "@next/font/local";
 
 const fontITCGaramond = localFont({
   src: "../public/itcgaramondstd-ltcond.otf",
@@ -20,16 +20,7 @@ export default function Home() {
     <>
       <div className="min-h-screen pt-6 pb-20 text-layers-pink-light font-extralight bg-dark-brown-grey flex flex-col justify-around items-center">
         <div className="flex flex-col justify-around items-center max-w-md px-20 ">
-          <Image
-            src={layersLogo}
-            alt="Layers logo"
-            className="fit max-w-[100%]"
-          />
-          <h1
-            className={`text-5xl text-transparent bg-title-gradient bg-clip-text tracking-[0.5rem] indent-[0.5rem] ${fontCircle.className}`}
-          >
-            Layers
-          </h1>
+          <Image src={layersLogo} alt="Layers logo" height={400} width={400} />
         </div>
 
         <h2
@@ -107,17 +98,6 @@ export default function Home() {
               width={42}
             />
           </Link>
-          {/* <Link
-            href="https://github.com/GIRLYDAO/layers-webapp"
-            target="_blank"
-          >
-            <Image
-              src={gitHubIcon}
-              alt="GitHub: public codebase."
-              height={30}
-              width={30}
-            />
-          </Link> */}
         </div>
         <footer
           className={`text-center mt-6 opacity-50 tracking-widest ${fontITCGaramond.className}`}
