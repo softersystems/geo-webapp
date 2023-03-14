@@ -16,6 +16,9 @@
 # production
 /build
 
+# subpage
+/frens
+
 # misc
 .DS_Store
 *.pem
