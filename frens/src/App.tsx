@@ -1,36 +1,13 @@
 import { FC, ReactNode, useEffect, useMemo, useState } from "react";
-import {
-  Order_By,
-  Post,
-  User,
-  ProtocolOptions,
-  SocialProtocol,
-} from "@spling/social-protocol";
+import { Order_By, Post, User, ProtocolOptions, SocialProtocol } from "@spling/social-protocol";
 import PostItem from "./components/PostItem";
 import { clusterApiUrl, Keypair, PublicKey } from "@solana/web3.js";
-import {
-  AppBar,
-  Button,
-  ButtonBase,
-  CircularProgress,
-  Container,
-  Grid,
-  IconButton,
-  Toolbar,
-  Typography,
-} from "@mui/material";
-import {
-  WalletModalProvider,
-  WalletMultiButton,
-} from "@solana/wallet-adapter-react-ui";
+import { AppBar, Button, ButtonBase, CircularProgress, Container, Grid, IconButton, Toolbar, Typography } from "@mui/material";
+import { WalletModalProvider, WalletMultiButton } from "@solana/wallet-adapter-react-ui";
 import { WalletAdapterNetwork } from "@solana/wallet-adapter-base";
 import { PhantomWalletAdapter } from "@solana/wallet-adapter-wallets";
-import {
-  ConnectionProvider,
-  useWallet,
-  WalletProvider,
-} from "@solana/wallet-adapter-react";
-import SpotForm from "./components/SpotForm";
+import { ConnectionProvider, useWallet, WalletProvider } from "@solana/wallet-adapter-react";
+import MapContainer from "./components/Map/MapContainer";
 import { bs58 } from "@project-serum/anchor/dist/cjs/utils/bytes";
 
 // Default styles that can be overridden by your app
@@ -84,8 +61,7 @@ const Content: FC = () => {
 
         const payerWallet = Keypair.fromSecretKey(bs58.decode(privateKey));
         const socialProtocol = await new SocialProtocol(wallet, payerWallet, {
-          rpcUrl:
-            "https://rpc.helius.xyz/?api-key=66af82c4-034e-4c06-8d14-d6da454ac9c9",
+          rpcUrl: "https://rpc.helius.xyz/?api-key=66af82c4-034e-4c06-8d14-d6da454ac9c9",
           useIndexer: true,
         } as ProtocolOptions).init();
         setSocialPorotcol(socialProtocol);
@@ -95,11 +71,7 @@ const Content: FC = () => {
         const user = await socialProtocol.getUserByPublicKey(wallet.publicKey!);
         if (user === null) {
           console.log("User does not exist lets create one...");
-          const createdUser: User = await socialProtocol.createUser(
-            "Carrot",
-            null,
-            "I like carrots!"
-          );
+          const createdUser: User = await socialProtocol.createUser("Carrot", null, "I like carrots!");
           // console.log("TEST createdUser", JSON.stringify(createdUser));
         } else {
           console.log("Welcome back " + user.nickname);
@@ -128,12 +100,7 @@ const Content: FC = () => {
 
           // createUser();
 
-          const newPosts: Post[] = await socialProtocol.getAllPosts(
-            1,
-            20,
-            (page - 1) * 20,
-            Order_By.Desc
-          );
+          const newPosts: Post[] = await socialProtocol.getAllPosts(1, 20, (page - 1) * 20, Order_By.Desc);
           if (newPosts.length === 0) setEndOfList(true);
           setPosts([...posts, ...newPosts]);
         } catch (error) {
@@ -154,20 +121,10 @@ const Content: FC = () => {
 
   // Check on scroll if user reach almost the bottom.
   const handleScroll = () => {
-    const windowHeight =
-      "innerHeight" in window
-        ? window.innerHeight
-        : document.documentElement.offsetHeight;
+    const windowHeight = "innerHeight" in window ? window.innerHeight : document.documentElement.offsetHeight;
     const body = document.body;
     const html = document.documentElement;
-    const docHeight =
-      Math.max(
-        body.scrollHeight,
-        body.offsetHeight,
-        html.clientHeight,
-        html.scrollHeight,
-        html.offsetHeight
-      ) - 200;
+    const docHeight = Math.max(body.scrollHeight, body.offsetHeight, html.clientHeight, html.scrollHeight, html.offsetHeight) - 200;
     const windowBottom = windowHeight + window.pageYOffset;
 
     // Check if list reached the bottom.
@@ -199,11 +156,7 @@ const Content: FC = () => {
               marginRight: 10,
             }}
           >
-            <img
-              src={require("./assets/images/whatsapp_icon.png")}
-              alt="Whatsapp Icon"
-              style={{ width: 20, height: 20 }}
-            />
+            <img src={require("./assets/images/whatsapp_icon.png")} alt="Whatsapp Icon" style={{ width: 20, height: 20 }} />
           </IconButton>
           <IconButton
             onClick={() => {
@@ -219,11 +172,7 @@ const Content: FC = () => {
               marginRight: 10,
             }}
           >
-            <img
-              src={require("./assets/images/twitter_icon.png")}
-              alt="Twitter Icon"
-              style={{ width: 20, height: 20 }}
-            />
+            <img src={require("./assets/images/twitter_icon.png")} alt="Twitter Icon" style={{ width: 20, height: 20 }} />
           </IconButton>
           <IconButton
             onClick={() => {
@@ -238,16 +187,13 @@ const Content: FC = () => {
               alignItems: "center",
             }}
           >
-            <img
-              src={require("./assets/images/discord_icon.png")}
-              alt="Discord Icon"
-              style={{ width: 20, height: 20 }}
-            />
+            <img src={require("./assets/images/discord_icon.png")} alt="Discord Icon" style={{ width: 20, height: 20 }} />
           </IconButton>
         </Toolbar>
       </AppBar>
-      {socialProtocol && <SpotForm socialProtocol={socialProtocol} />}
-      {/* <button onClick={getUserData}>getUserData</button> */}
+      <MapContainer />
+      {/* {socialProtocol && <SpotForm socialProtocol={socialProtocol} />}
+      <button onClick={getUserData}>getUserData</button>
       <Grid
         container
         justifyContent="center"
@@ -280,8 +226,8 @@ const Content: FC = () => {
               You have reached the end of the list! 🚀
             </Typography>
           </div>
-        )}
-      </Grid>
+        )} 
+      </Grid>*/}
     </Container>
   );
 };
