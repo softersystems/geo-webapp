@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import Map from "./Map";
 
 export default function MapContainer() {
-  const [userCoord, setUserCoord] = useState([37.8, -122.4]);
+  const [userCoord, setUserCoord] = useState([52.49, 13.38]);
 
   const getUserLocation = () => {
     const success = async (pos) => {

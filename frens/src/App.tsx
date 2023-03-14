@@ -136,62 +136,15 @@ const Content: FC = () => {
   // Render UI
   return (
     <Container maxWidth="sm">
-      <AppBar position="fixed">
-        <Toolbar style={{ backgroundColor: "#32283b" }}>
+      <header className="header">
+        <Toolbar style={{ backgroundColor: "#ffffff00" }}>
           <Typography variant="h6" style={{ flexGrow: 1 }}>
-            Feed
+            Geo
           </Typography>
           <WalletMultiButton style={{ marginRight: 10 }} />
-          <IconButton
-            onClick={() => {
-              window.open("https://wa.me/31653742901", "_blank");
-            }}
-            style={{
-              height: 42,
-              width: 42,
-              backgroundColor: "#271b2d",
-              borderRadius: 36 / 2,
-              justifyContent: "center",
-              alignItems: "center",
-              marginRight: 10,
-            }}
-          >
-            <img src={require("./assets/images/whatsapp_icon.png")} alt="Whatsapp Icon" style={{ width: 20, height: 20 }} />
-          </IconButton>
-          <IconButton
-            onClick={() => {
-              window.open("https://twitter.com/Spling_Labs", "_blank");
-            }}
-            style={{
-              height: 42,
-              width: 42,
-              backgroundColor: "#271b2d",
-              borderRadius: 36 / 2,
-              justifyContent: "center",
-              alignItems: "center",
-              marginRight: 10,
-            }}
-          >
-            <img src={require("./assets/images/twitter_icon.png")} alt="Twitter Icon" style={{ width: 20, height: 20 }} />
-          </IconButton>
-          <IconButton
-            onClick={() => {
-              window.open("https://discord.gg/7e3QN3Hy64", "_blank");
-            }}
-            style={{
-              height: 42,
-              width: 42,
-              backgroundColor: "#271b2d",
-              borderRadius: 36 / 2,
-              justifyContent: "center",
-              alignItems: "center",
-            }}
-          >
-            <img src={require("./assets/images/discord_icon.png")} alt="Discord Icon" style={{ width: 20, height: 20 }} />
-          </IconButton>
         </Toolbar>
-      </AppBar>
-      <MapContainer />
+      </header>
+      2 <MapContainer />
       {/* {socialProtocol && <SpotForm socialProtocol={socialProtocol} />}
       <button onClick={getUserData}>getUserData</button>
       <Grid

@@ -35,10 +35,12 @@ export default function Map({ userCoord }) {
 
   return (
     <Mapbox
-      style="mapbox://styles/mapbox/streets-v9"
+      style="mapbox://styles/saniaonline/clegbtcbe002g01mscbjrx7d5"
       containerStyle={{
-        height: "100vh",
+        height: "105vh",
         width: "100vw",
+        position: "fixed",
+        left: 0,
       }}
     >
       <Layer type="symbol" id="marker" layout={{ "icon-image": "marker-15" }}>
